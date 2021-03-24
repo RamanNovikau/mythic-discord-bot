@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
+const config = require('../../common/config');
 
-const dotenv = require('dotenv');
-
-dotenv.config();
-
-const url = process.env.MONGO_DB_CONNECTION_STRING;
+const url = config.MONGO_DB_CONNECTION_STRING;
 const dbConnection = () => {
   mongoose
     .connect(url, {
